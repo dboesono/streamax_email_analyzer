@@ -11,9 +11,9 @@ from openai import OpenAI
 import openai
 
 # -------------------- VolcEngine API Setup --------------------
-from config import ARK_API_KEY
+# from config import ARK_API_KEY
 
-os.environ["ARK_API_KEY"] = ARK_API_KEY  
+os.environ["ARK_API_KEY"] = st.secrets["ARK_API_KEY"]  
 client = OpenAI(
     api_key=os.environ.get("ARK_API_KEY"),
     base_url="https://ark.cn-beijing.volces.com/api/v3",
